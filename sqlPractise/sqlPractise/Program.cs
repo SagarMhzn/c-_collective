@@ -29,12 +29,44 @@ namespace sqlPractise
                     Console.WriteLine("database Connected");
                     //adding new table tbl_student
 
-                    string tbl_query = "Create table tbl_student(id int not null primary key,name varchar(50),gender varchar(50), address varchar(50), faculty varchar(50))";
-                    SqlCommand cmd= new SqlCommand(tbl_query, conn);
+                    //string tbl_query = "Create table tbl_student(id int not null primary key,name varchar(50),gender varchar(50), address varchar(50), faculty varchar(50))";
+                    //inserting data using parameter
+                    string ins_query = "insert into tbl_student (@id,@name,@gender,@address,@faculty)";
+
+                    //SqlCommand cmd= new SqlCommand(tbl_query, conn);
+                    SqlCommand cmd= new SqlCommand(ins_query, conn);
+
+                    //taking input from the user
+
+                    Console.WriteLine("enter your id");
+                    String id = Console.ReadLine();
+
+                    Console.WriteLine("enter your name");
+                    String name = Console.ReadLine();
+
+                    Console.WriteLine("enter your gender");
+                    String gender = Console.ReadLine();
+
+                    Console.WriteLine("enter your address");
+                    String address = Console.ReadLine();
+
+                    Console.WriteLine("enter your faculty");
+                    String faculty = Console.ReadLine();
+
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.Parameters.AddWithValue("@name", name);
+                    cmd.Parameters.AddWithValue("@gender", gender);
+                    cmd.Parameters.AddWithValue("@address", address);
+                    cmd.Parameters.AddWithValue("@faculty", faculty);
                     int res = cmd.ExecuteNonQuery();
-                    if (res == -1)
+                    //if (res == -1)
+                    //{
+                    //    Console.WriteLine("table created");
+                    //}
+
+                    if(res >= 1)
                     {
-                        Console.WriteLine("table created");
+                        Console.WriteLine("data Inserted in the table");
                     }
                 }
                 else
