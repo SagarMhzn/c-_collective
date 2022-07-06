@@ -1,0 +1,8 @@
+C:\Users\Dell\Desktop\SagarMhzn\sqlPractise\sqlPractise\obj\Debug\sqlPractise.csproj.AssemblyReference.cache
+C:\Users\Dell\Desktop\SagarMhzn\sqlPractise\sqlPractise\obj\Debug\sqlPractise.csproj.SuggestedBindingRedirects.cache
+C:\Users\Dell\Desktop\SagarMhzn\sqlPractise\sqlPractise\obj\Debug\sqlPractise.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\SagarMhzn\sqlPractise\sqlPractise\bin\Debug\sqlPractise.exe.config
+C:\Users\Dell\Desktop\SagarMhzn\sqlPractise\sqlPractise\bin\Debug\sqlPractise.exe
+C:\Users\Dell\Desktop\SagarMhzn\sqlPractise\sqlPractise\bin\Debug\sqlPractise.pdb
+C:\Users\Dell\Desktop\SagarMhzn\sqlPractise\sqlPractise\obj\Debug\sqlPractise.exe
+C:\Users\Dell\Desktop\SagarMhzn\sqlPractise\sqlPractise\obj\Debug\sqlPractise.pdb

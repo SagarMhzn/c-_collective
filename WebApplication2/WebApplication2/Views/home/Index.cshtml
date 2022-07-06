@@ -1,0 +1,33 @@
+﻿
+@model WebApplication2.Models.student
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("SubmitData", "Home"))
+        {
+            <label>ROll no.:</label>@Html.Editor("rollno")<br />
+            @Html.ValidationMessage("rollno")
+            <label>Name:</label>@Html.TextBox("name")<br />
+            @Html.ValidationMessage("name")
+            <label>Password:</label>@Html.Editor("password")<br />
+            @Html.ValidationMessage("password")
+            <label>Re-Password:</label>@Html.Editor("repassword")<br />
+            @Html.ValidationMessage("repassword")
+            <label>Age:</label>@Html.Editor("age")<br />
+            @Html.ValidationMessage("age")
+            <label>Address:</label>@Html.TextBox("address")<br />
+            @Html.ValidationMessage("address")
+            <label>Phone:</label>@Html.Editor("phone")<br />
+            @Html.ValidationMessage("phone")
+            <input type="submit" value="submit" />
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>displayHome</title>
+</head>
+<body>
+    <div>
+        this is the homepage!
+        <a href="~/Contact/displayContact">Contact</a>
+        <a href="~/Form/displayForm">Form</a>
+        <a href="~/AboutUS/displayAbout">About-Us</a>
+        @for (int i = 1; i <= 10; i++)
+        {
+            <h2>@i</h2>
+        }
+    </div>
+    <div>
+        @helper display(string[] str)
+            {
+                foreach(string s in str)
+                {
+                    <h4>@s</h4>
+                }
+            }
+    </div>
+        @display(new string[] {"apple","banana","mango"})
+    <div>
+        @Html.ActionLink("click here to go to Form", "../Form/displayForm")<br/>
+        @Html.ActionLink("click here to go to Contact", "../Contact/displayContact")<br/>
+        @Html.ActionLink("click here to go to About-us", "../AboutUs/displayAbout")
+    </div>
+    <div>
+        <label>Username</label>@Html.TextBox("uname")<br />
+        <label>Password</label>@Html.Password("pass")<br />
+        <label>Re-Password</label>@Html.Password("repass")<br />
+        <label>Gender</label>@Html.RadioButton("gender", "male") Male &nbsp;
+        @Html.RadioButton("gender", "female") Female<br />
+        <label>Subject</label>@Html.CheckBox("C++") C++ &nbsp;
+        @Html.CheckBox("java") Java<br />
+        <label>Country</label>@Html.DropDownList("Country","nepal") Nepal &nbsp;
+        @Html.DropDownList("Country","usa") USA &nbsp;
+        @Html.DropDownList("Country","UK") UK <br/>   
+    </div>
+</body>
+</html>

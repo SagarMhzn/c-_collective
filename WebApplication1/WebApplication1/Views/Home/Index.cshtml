@@ -1,0 +1,53 @@
+﻿
+@model WebApplication1.Models.student
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("usingParameter", "Home"))
+        {
+            <label>Username</label><input type="text" name="uname" /><br />
+            <label>Address</label><input type="text" name="add" /><br />
+            <label>Age</label><input type="text" name="age" /><br />
+            <input type="submit" value="Save" />
+        }
+    </div>
+    <div>
+        <h1>Submitting data using request</h1>
+        @using (Html.BeginForm("usingRequest", "Home", FormMethod.Get))
+        {
+            <label>Username</label><input type="text" name="uname" /><br />
+            <label>Address</label><input type="text" name="add" /><br />
+            <label>Age</label><input type="text" name="age" /><br />
+            <input type="submit" value="Save" />
+        }
+    </div>
+    <div>
+        <h1>Submitting data using Form collection</h1>
+        @using (Html.BeginForm("usingFormCollection", "Home"))
+        {
+            <label>Username</label><input type="text" name="uname" /><br />
+            <label>Address</label><input type="text" name="add" /><br />
+            <label>Age</label><input type="text" name="age" /><br />
+            <input type="submit" value="Save" />
+        }
+    </div>
+
+    <div>
+        <h1>submitting data using strongly binding</h1>
+        @using (Html.BeginForm("usingStrongBinding", "Home"))
+        {
+            <label>Username</label>@Html.TextBoxFor(x => x.Username)<br />
+            <label>Address</label>@Html.TextBoxFor(x => x.Address)<br />
+            <label>Age</label>@Html.TextBoxFor(x => x.Age)<br />
+            <input type="submit" value="Save" />
+        }
+    </div>
+</body>
+</html>

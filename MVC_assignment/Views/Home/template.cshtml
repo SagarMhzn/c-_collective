@@ -1,0 +1,26 @@
+﻿
+@model MVC_assignment.Models.student
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>template</title>
+</head>
+<body>
+    <div>
+        @Html.DisplayName("Id"): @Html.DisplayText("Id")<br />
+        @Html.DisplayName("Name"):@Html.DisplayText("Name")<br />
+        @Html.DisplayName("Addresss"): @Html.DisplayText("Address")<br />
+        @Html.DisplayName("Age"):@Html.DisplayText("Age")<br />
+        @Html.DisplayName("isPass"):@Html.CheckBox("isPass")<br/>
+
+
+    </div>
+    <div>
+        @Html.DisplayForModel()
+        @Html.EditorForModel()
+    </div>
+</body>
+</html>

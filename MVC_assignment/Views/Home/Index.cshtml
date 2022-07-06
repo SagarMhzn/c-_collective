@@ -1,0 +1,20 @@
+﻿
+@model MVC_assignment.Models.student
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @Html.TextBoxFor(x => x.Id)<br />
+        @Html.TextBoxFor(x => x.Name)<br />
+        @Html.TextBoxFor(x => x.Address)<br />
+        @Html.TextBoxFor(x => x.Age)<br />
+        @Html.CheckBoxFor(x => x.isPass)
+    </div>
+</body>
+</html>
