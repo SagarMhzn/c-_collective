@@ -59,7 +59,7 @@ namespace ENwithMVC.Controllers
             {
                 ModelState.Clear();
             }
-            return View("Index");
+            return View();
         }
     }
 }
